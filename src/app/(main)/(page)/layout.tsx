@@ -34,7 +34,7 @@ export default function Layout({ children }: Props) {
 					</button>
 				</div>
 			</motion.div>
-			{children}
+			<div className="px-10">{children}</div>
 		</div>
 	);
 }
