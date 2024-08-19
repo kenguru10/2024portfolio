@@ -20,7 +20,7 @@ export default function Layout({ children }: Props) {
 								Kenguru
 							</a>
 						</div>
-						<div className="flex gap-3 items-center ml-10">
+						<div className="md:flex gap-3 items-center ml-10 hidden ">
 							<a href="/2024portfolio/home" className="text-[1em] font-[400]">
 								Home
 							</a>
