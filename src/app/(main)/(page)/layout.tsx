@@ -30,7 +30,7 @@ export default function Layout({ children }: Props) {
 						</div>
 					</div>
 					<button className="flex px-7 py-1 border rounded-full border-[#DACDBC]">
-						<div className="">Projects</div>
+						<div className="montserrat font-[500]">Projects</div>
 					</button>
 				</div>
 			</motion.div>
