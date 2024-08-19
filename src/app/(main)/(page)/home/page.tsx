@@ -30,7 +30,7 @@ export default function Page() {
 						<p className="text-3xl font-[500] max-w-100 md:max-w-[10em] my-3">
 							Front-end and Back-end Developer with passion in UI/UX Design
 						</p>
-						<div className="flex gap-3 items-center my-3 justify-center md:justify-start">
+						<div className="flex gap-3 items-center mt-3 mb-10 justify-center md:justify-start">
 							<button className="rounded-full border border-[#DACDBC] px-4 py-1 bg-[#C9B09F] ">
 								Send Email to Me
 							</button>
@@ -38,25 +38,32 @@ export default function Page() {
 								Learn More
 							</a>
 						</div>
-					</div>
-				</div>
-			</motion.div>
-
-			<motion.div
-				initial={{ y: 20, opacity: 0 }}
-				animate={{ y: 0, opacity: 1 }}
-				transition={{ ease: "easeInOut", duration: 0.75, delay: 1.5 }}
-			>
-				<div className="grid grid-cols-1 md:grid-cols-2 px-10 py-1">
-					<div></div>
-					<div className="flex flex-col gap-3">
-						<p className="text-xl font-[500]">Works</p>
-						<div className="flex w-[75%] min-h-[2em] p-5 bg-[#DFD3C3] gap-3 rounded-[10px]">
-							<div className="flex flex-col gap-1">
-								<div className="text-[1em] font-bold">Software Engineer</div>
-								<div className="text-[.9em]">Carbon Exchange (Hong Kong) Ltd</div>
+						<motion.div
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ ease: "easeInOut", duration: 0.75, delay: 1.5 }}
+						>
+							<div className="flex flex-col gap-3 py-8 border-t border-[#DFD3C3] cursor-pointer">
+								<p className="text-xl font-[500]">Works</p>
+								<div
+									className="flex min-h-[2em] py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px]"
+									style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+								>
+									<img
+										src="https://www.carbonexchange.net/img/footer_logo.png"
+										alt=""
+										className="w-[3em] h-[3em] object-cover"
+									/>
+									<div className="flex flex-col gap-1">
+										<div className="text-[1em] font-bold">Software Engineer</div>
+										<div className="text-[.9em]">Carbon Exchange (Hong Kong) Ltd</div>
+									</div>
+									<div className="flex items-end h-100 ms-auto">
+										<div className="text-[.8em]">2022 - Present</div>
+									</div>
+								</div>
 							</div>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</motion.div>
