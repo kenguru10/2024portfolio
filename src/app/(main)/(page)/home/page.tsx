@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
+// update the above line to remove the eslint warning
 "use client";
 
 import React from "react";
