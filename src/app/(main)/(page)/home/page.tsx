@@ -22,7 +22,7 @@ export default function Page() {
 					<div className="md:text-start sm:text-center pt-10 pb-2 px-10">
 						<div className="flex justify-center md:max-w-[60%] sm:max-w-[100%] mb-10">
 							<img
-								// src="/2024portfolio/profile.png"
+								src="/2024portfolio/profile.png"
 								alt=""
 								className="w-[10em] h-[10em] object-cover rounded-[10%]"
 							/>
@@ -100,7 +100,7 @@ export default function Page() {
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ ease: "easeInOut", duration: 0.75, delay: 2.25 }}
 			>
-				<div className="px-10">
+				<div className="px-10 mb-10 relative">
 					<h5 className="text-xl font-[500] mb-5">Skills</h5>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
 						<div className="flex flex-wrap gap-3 items-center">
@@ -165,6 +165,9 @@ export default function Page() {
 								</div>
 							</div>
 						</div>
+					</div>
+					<div className="flex justify-end">
+						<div className="h-100 text-[.8em] underline">Copyright 2024 by KenKong</div>
 					</div>
 				</div>
 			</motion.div>
