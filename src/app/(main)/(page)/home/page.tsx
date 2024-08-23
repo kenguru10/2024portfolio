@@ -27,9 +27,10 @@ export default function Page() {
 								className="w-[10em] h-[10em] object-cover rounded-[10%]"
 							/>
 						</div>
-						<p className="text-4xl text-center md:text-start font-[500] my-3">Hi, I'm Kenguru</p>
+						<p className="text-4xl text-center md:text-start font-[500] my-3">Hi, I'm Ken Kong</p>
 						<p className="text-xl font-[400] text-center md:text-start max-w-[100%] md:max-w-[70%] my-3 montserrat">
-							Hong Kong Web Developer and Designer for front-end and back-end. Good at Python and Nodejs.
+							People used to call me Kenguru. I am a Hong Kong Web Developer and Designer for front-end
+							and back-end. Good at Python and Nodejs.
 						</p>
 					</div>
 					<div className="flex flex-col items-center md:items-start pt-5">
