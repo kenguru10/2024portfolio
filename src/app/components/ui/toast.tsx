@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 type Props = {
 	message: React.ReactNode;
-	type: "success" | "error" | "warning";
+	type: "success" | "error" | "warning" | "default";
 };
 
 export function Toast(props: Props) {
+	const [toastColor, setToastColor] = useState("");
+
+	useEffect(() => {
+		if (props.type === "success") {
+			setToastColor("bg-green-200");
+		} else if (props.type === "error") {
+			setToastColor("bg-red-200");
+		} else if (props.type === "warning") {
+			setToastColor("bg-yellow-500");
+		} else {
+			setToastColor("bg-gray-900");
+		}
+	}, [props.type]);
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -14,7 +28,10 @@ export function Toast(props: Props) {
 			transition={{ ease: "easeInOut", duration: 0.75 }}
 		>
 			<div
-				className="max-w-xs bg-gray-800 text-sm text-white rounded-md shadow-lg dark:bg-gray-900 mb-3 ml-3 ml-3 z-[99] fixed bottom-0 right-10"
+				className={
+					"max-w-xs text-sm text-white rounded-md shadow-lg mb-3 ml-3 ml-3 z-[99] fixed bottom-0 right-10 " +
+					toastColor
+				}
 				role="alert"
 			>
 				<div className="flex p-4">

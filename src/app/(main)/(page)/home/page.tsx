@@ -30,7 +30,7 @@ export default function Page() {
 				setToast({
 					open: true,
 					message: "Thank you for contacting me! I will reply you as soon as possible.",
-					type: "success",
+					type: "default",
 				});
 				setIsSendingEmail(false);
 			} else {
