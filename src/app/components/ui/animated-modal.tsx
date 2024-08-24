@@ -33,7 +33,7 @@ export const ModalTrigger = ({ children, className }: { children: ReactNode; cla
 	return (
 		<button
 			className={cn(
-				"px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
+				"px-4 py-2 rounded-md text-white dark:text-black text-center relative overflow-hidden",
 				className
 			)}
 			onClick={() => setOpen(true)}
@@ -80,7 +80,7 @@ export const ModalBody = ({ children, className }: { children: ReactNode; classN
 					<motion.div
 						ref={modalRef}
 						className={cn(
-							"min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+							"min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-[#C9B09F] border border-transparent dark:border-[#DACDBC] md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
 							className
 						)}
 						initial={{

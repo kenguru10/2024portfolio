@@ -2,18 +2,59 @@
 /* eslint-disable @next/next/no-img-element */
 // update the above line to remove the eslint warning
 "use client";
-
-import React from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaPhp, FaPython, FaSass } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { DiMysql } from "react-icons/di";
 import { SiFlask } from "react-icons/si";
 import { Modal, ModalBody, ModalProvider, ModalTrigger, ModalContent } from "@/app/components/ui/animated-modal";
+import { useForm } from "react-hook-form";
+import { Toast } from "@/app/components/ui/toast";
+import axios from "axios";
 
 export default function Page() {
+	const { register, handleSubmit } = useForm();
+	const [toast, setToast] = useState({
+		open: false,
+		message: "",
+		type: "",
+	});
+	const [isSendingEmail, setIsSendingEmail] = useState(false);
+
+	const onSubmitMessage = async (data: any) => {
+		setIsSendingEmail(true);
+		axios.post(`${process.env.HOST}/devcollab/contact-me`, data).then((res) => {
+			if (res.status === 200) {
+				// show success alert
+				setToast({
+					open: true,
+					message: "Thank you for contacting me! I will reply you as soon as possible.",
+					type: "success",
+				});
+				setIsSendingEmail(false);
+			} else {
+				setToast({
+					open: true,
+					message: "I am currently not availiable to respond to you. Please try again later.",
+					type: "warning",
+				});
+				setIsSendingEmail(false);
+			}
+		});
+	};
+
+	useEffect(() => {
+		if (toast.open) {
+			setTimeout(() => {
+				setToast({ open: false, message: "", type: "" });
+			}, 10000);
+		}
+	}, [toast]);
+
 	return (
-		<div>
+		<div className="relative">
+			{toast.open && <Toast message={toast.message} type={toast.type as "success" | "error" | "warning"} />}
 			<motion.div
 				initial={{ y: 20, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
@@ -40,22 +81,66 @@ export default function Page() {
 						</p>
 						<div className="flex gap-3 items-center mt-3 mb-10 justify-center md:justify-start">
 							<Modal>
-								<ModalTrigger>Send Email to Me</ModalTrigger>
+								<ModalTrigger className="rounded-full border border-[#DACDBC] px-4 py-1 bg-[#C9B09F]">
+									<div className="">Send Email to Me</div>
+								</ModalTrigger>
 								<ModalBody>
 									<ModalContent>
-										<h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-											Book your trip to{" "}
-											<span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-												Bali
-											</span>{" "}
-											now! ✈️
-										</h4>
+										<div className="flex flex-col items-center px-3">
+											<h5 className="text-xl font-[500]">Welcome to send email to me!</h5>
+											<div className="mt-5 self-start w-full">
+												<form onSubmit={handleSubmit(onSubmitMessage)} className="">
+													<div className="flex flex-col items-start w-full">
+														<div className="mt-2 w-50">
+															<input
+																type="text"
+																{...register("name")}
+																placeholder="Name"
+																autoComplete="off"
+																required
+																className="bg-transparent rounded-md px-4 py-1 w-full text-black placeholder:text-black border border-black border-2 outline-none"
+															/>
+														</div>
+														<div className="mt-2 w-full">
+															<input
+																{...register("email")}
+																type="email"
+																required
+																autoComplete="off"
+																placeholder="Email"
+																className="bg-transparent rounded-md px-4 py-1 w-full text-black placeholder:text-black border border-black border-2 outline-none"
+															/>
+														</div>
+														<div className="mt-2 w-full">
+															<textarea
+																{...register("message")}
+																placeholder="Message"
+																rows={5}
+																autoComplete="off"
+																required
+																className="bg-transparent rounded-md px-4 py-1 w-full text-black placeholder:text-black border border-black border-2 outline-none"
+															/>
+														</div>
+														<div className="flex flex-1 justify-end w-full pt-3">
+															{!isSendingEmail ? (
+																<button
+																	className="underline cursor-pointer"
+																	type="submit"
+																>
+																	Submit
+																</button>
+															) : (
+																<button className="underline">Sending...</button>
+															)}
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
 									</ModalContent>
 								</ModalBody>
 							</Modal>
-							<button className="rounded-full border border-[#DACDBC] px-4 py-1 bg-[#C9B09F] ">
-								Send Email to Me
-							</button>
+
 							<a href="/2024portfolio/services" className="underline text-[.9em]">
 								Learn More
 							</a>
