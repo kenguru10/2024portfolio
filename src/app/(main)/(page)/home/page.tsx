@@ -9,6 +9,7 @@ import { FaHtml5, FaCss3, FaJs, FaReact, FaPhp, FaPython, FaSass } from "react-i
 import { RiNextjsFill } from "react-icons/ri";
 import { DiMysql } from "react-icons/di";
 import { SiFlask } from "react-icons/si";
+import { Modal, ModalBody, ModalProvider, ModalTrigger, ModalContent } from "@/app/components/ui/animated-modal";
 
 export default function Page() {
 	return (
@@ -38,6 +39,20 @@ export default function Page() {
 							Front-end and Back-end Developer with passion in UI/UX Design
 						</p>
 						<div className="flex gap-3 items-center mt-3 mb-10 justify-center md:justify-start">
+							<Modal>
+								<ModalTrigger>Send Email to Me</ModalTrigger>
+								<ModalBody>
+									<ModalContent>
+										<h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
+											Book your trip to{" "}
+											<span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
+												Bali
+											</span>{" "}
+											now! ✈️
+										</h4>
+									</ModalContent>
+								</ModalBody>
+							</Modal>
 							<button className="rounded-full border border-[#DACDBC] px-4 py-1 bg-[#C9B09F] ">
 								Send Email to Me
 							</button>
