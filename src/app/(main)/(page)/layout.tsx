@@ -24,9 +24,15 @@ export default function Layout({ children }: Props) {
 							<a href="/2024portfolio/home" className="text-[1em] font-[400]">
 								Home
 							</a>
-							<a className="text-[1em] font-[400]">Services</a>
-							<a className="text-[1em] font-[400]">About Me</a>
-							<a className="text-[1em] font-[400]">Contact Me</a>
+							<a href="/2024portfolio/services" className="text-[1em] font-[400]">
+								Services
+							</a>
+							<a href="/2024portfolio/about" className="text-[1em] font-[400]">
+								About Me
+							</a>
+							<a href="/2024portfolio/contact" className="text-[1em] font-[400]">
+								Contact Me
+							</a>
 						</div>
 					</div>
 					<button className="flex px-7 py-1 border rounded-full border-[#DACDBC]">
