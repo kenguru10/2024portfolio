@@ -4,7 +4,7 @@
 "use client";
 import React, { FormEvent, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaPhp, FaPython, FaSass } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaPhp, FaPython, FaSass, FaWhatsapp } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { DiMysql } from "react-icons/di";
 import { SiFlask } from "react-icons/si";
@@ -276,8 +276,9 @@ export default function Page() {
 								</ModalBody>
 							</Modal>
 
-							<a href="/2024portfolio/services" className="underline text-[.9em]">
-								Learn More
+							<a href="/2024portfolio/services" className="underline text-[.9em] flex gap-1">
+								<FaWhatsapp className="text-[1.5em]" />
+								WhatsApp Me
 							</a>
 						</div>
 						<motion.div
@@ -328,53 +329,23 @@ export default function Page() {
 								</div>
 							</div>
 						</motion.div>
-						<motion.div
-							initial={{ y: 20, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
-							transition={{ ease: "easeInOut", duration: 0.75, delay: 1.5 }}
-						>
-							<div className="flex flex-col gap-3 py-8 border-t border-[#DFD3C3]">
-								<p className="text-xl mb-5 font-[500]">Projects</p>
-								<div className="flex flex-col gap-7">
-									<div
-										className="flex min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] flex-wrap cursor-pointer shadow-sm hover:shadow-lg"
-										style={{ transition: "0.5s ease all" }}
-										onClick={() => window.open("https://devcollab-psi.vercel.app/landingpage")}
-									>
-										<img
-											src="https://devcollab-psi.vercel.app/favicon.ico"
-											alt=""
-											className="w-[3em] h-[3em] object-cover object-left rounded-md"
-										/>
-										<div className="flex flex-col gap-1">
-											<div className="text-[1em] font-bold"> Game API Website (TORN)</div>
-											<div className="text-[.9em]">One week</div>
-										</div>
-										<div className="flex items-end h-100 ms-auto">
-											<div className="text-[.8em]">August, 2024</div>
-										</div>
-									</div>
-									<div
-										className="flex min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
-										style={{ transition: "0.5s ease all" }}
-										onClick={() => window.open("https://esgbot.net")}
-									>
-										<img
-											src="https://www.carbonexchange.net/img/footer_logo.png"
-											alt=""
-											className="w-[3em] h-[3em] object-cover"
-										/>
-										<div className="flex flex-col gap-1">
-											<div className="text-[1em] font-bold">ESGBOT - ESG Reporting Software</div>
-											<div className="text-[.9em]">1.5 Years</div>
-										</div>
-										<div className="flex items-end h-100 ms-auto">
-											<div className="text-[.8em]">2022 - Present</div>
-										</div>
-									</div>
-								</div>
+					</div>
+				</div>
+			</motion.div>
+			<motion.div
+				initial={{ y: 20, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				transition={{ ease: "easeInOut", duration: 0.75, delay: 2 }}
+			>
+				<div className="mx-10 my-5 p-5 border-[#DFD3C3] border-t">
+					<div className="flex flex-col">
+						<h5 className="text-xl font-[500]">Project</h5>
+
+						<div className="grid grid-cols-1 md:grid-cols-5 mt-4">
+							<div className="border p-3 rounded-lg border-[#DFD3C3]">
+								<h5 className="text-[0.9em] font-[500]">Pixel Nimbus</h5>
 							</div>
-						</motion.div>
+						</div>
 					</div>
 				</div>
 			</motion.div>
