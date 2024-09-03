@@ -82,8 +82,70 @@ export default function Page() {
 						</p>
 						<div className="relative mt-10">
 							<h5 className="text-xl font-[500] mb-5">Skills</h5>
-							<div className="flex gap-5 items-center">
-								<div className="flex flex-wrap gap-3 items-center">
+							<div className="items-center inline-flex flex-nowrap gap-3 w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+								<div className="flex flex-nowrap gap-3 items-center animate-infinite-scroll justify-center md:justify-start">
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaHtml5 className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">HTML</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaCss3 className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">CSS</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaJs className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">Javascript</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaReact className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">React</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<RiNextjsFill className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">NextJS</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaPhp className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">PHP</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<DiMysql className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">MySQL</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaPython className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">Python</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<SiFlask className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">Flask</div>
+										</div>
+									</div>
+									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
+										<FaSass className="w-[1.5em] h-[1.5em]" />
+										<div className="flex">
+											<div className="font-bold">Sass</div>
+										</div>
+									</div>
+								</div>
+								<div className="flex gap-3 flex-nowrap items-center animate-infinite-scroll justify-center md:justify-start">
 									<div className="flex p-5 border-2 border-[#DFD3C3] gap-3 rounded-[.5em] items-center cursor-pointer">
 										<FaHtml5 className="w-[1.5em] h-[1.5em]" />
 										<div className="flex">
