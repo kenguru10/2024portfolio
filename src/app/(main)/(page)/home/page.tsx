@@ -339,11 +339,52 @@ export default function Page() {
 			>
 				<div className="mx-10 my-5 p-5 border-[#DFD3C3] border-t">
 					<div className="flex flex-col">
-						<h5 className="text-xl font-[500]">Project</h5>
+						{/* <h5 className="text-xl font-[500]">Project</h5> */}
 
-						<div className="grid grid-cols-1 md:grid-cols-5 mt-4">
-							<div className="border p-3 rounded-lg border-[#DFD3C3]">
-								<h5 className="text-[0.9em] font-[500]">Pixel Nimbus</h5>
+						<div className="grid grid-cols-1 md:grid-cols-4 mt-4 gap-10">
+							<div
+								className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
+								onClick={() => window.open("https://devcollab-psi.vercel.app/landingpage")}
+							>
+								<div className="flex justify-between">
+									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Devcollab</h5>
+									<span className="text-[0.8em] text-gray-600">2024</span>
+								</div>
+								<span className="text-[0.8em] text-gray-600">Game Assistance</span>
+								<img src="devcollabpro.png" alt="" className="w-full rounded-md my-2" />
+								<p className="text-[0.9em] my-3">
+									A website built with Next.js and Python FastAPI combines a dynamic, responsive
+									frontend with a powerful backend.
+								</p>
+							</div>
+							<div
+								className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
+								onClick={() => window.open("https://www.devcollab.pro/pixel-nimbus/home")}
+							>
+								<div className="flex justify-between">
+									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Pixel Nimbus</h5>
+									<span className="text-[0.8em] text-gray-600">2024</span>
+								</div>
+								<span className="text-[0.8em] text-gray-600">Information</span>
+								<img src="pixelnimbus.png" alt="" className="w-full rounded-md my-2" />
+								<p className="text-[0.9em] my-3">
+									Website built with Next.js. Providing programming useful information and resources.
+								</p>
+							</div>
+							<div
+								className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
+								onClick={() => window.open("https://esgbot.net")}
+							>
+								<div className="flex justify-between">
+									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">ESGBOT</h5>
+									<span className="text-[0.8em] text-gray-600">2022</span>
+								</div>
+								<span className="text-[0.8em] text-gray-600">ESG Report Generation Services</span>
+								<img src="esgbot.png" alt="" className="w-full rounded-md my-2" />
+								<p className="text-[0.9em] my-3">
+									Website built with Flask and MySQL. Automatically generate ESG reports for SMEs in
+									Hong Kong.
+								</p>
 							</div>
 						</div>
 					</div>
