@@ -67,7 +67,7 @@ export default function Page() {
 				transition={{ ease: "easeInOut", duration: 0.75, delay: 1 }}
 			>
 				<div className="grid grid-cols-1 md:grid-cols-2">
-					<div className="md:text-start sm:text-center pt-10 pb-2 px-10">
+					<div className="md:text-start sm:text-center pt-10 pb-2 sm:px-10 px-2">
 						<div className="flex justify-center md:max-w-[60%] sm:max-w-[100%] mb-10">
 							<img
 								src="/2024portfolio/profile.png"
@@ -337,11 +337,11 @@ export default function Page() {
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ ease: "easeInOut", duration: 0.75, delay: 2 }}
 			>
-				<div className="mx-10 my-5 p-5 border-[#DFD3C3] border-t">
+				<div className="mx-1 sm:mx-10 my-5 p-5 border-[#DFD3C3] border-t">
 					<div className="flex flex-col">
 						{/* <h5 className="text-xl font-[500]">Project</h5> */}
 
-						<div className="grid grid-cols-1 md:grid-cols-4 mt-4 gap-10">
+						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4 gap-3 sm:gap-10">
 							<div
 								className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
 								onClick={() => window.open("https://devcollab-psi.vercel.app/landingpage")}
