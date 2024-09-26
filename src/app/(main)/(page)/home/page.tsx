@@ -386,6 +386,21 @@ export default function Page() {
 									Hong Kong.
 								</p>
 							</div>
+							<div
+								className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
+								onClick={() => window.open("https://saveforme.devcollab.pro")}
+							>
+								<div className="flex justify-between">
+									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">SaveForMe</h5>
+									<span className="text-[0.8em] text-gray-600">2024</span>
+								</div>
+								<span className="text-[0.8em] text-gray-600">Save For Me</span>
+								<img src="SaveForme.png" alt="" className="w-full rounded-md my-2" />
+								<p className="text-[0.9em] my-3">
+									Website built in React, TypeScript, JavaScript. Helping couples to save their money
+									instead of wasting them.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
