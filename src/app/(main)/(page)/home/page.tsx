@@ -359,7 +359,7 @@ export default function Page() {
 							</div>
 							<div
 								className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
-								onClick={() => window.open("https://www.devcollab.pro/pixel-nimbus/home")}
+								onClick={() => window.open("https://blog.devcollab.pro")}
 							>
 								<div className="flex justify-between">
 									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Pixel Nimbus</h5>
@@ -391,14 +391,13 @@ export default function Page() {
 								onClick={() => window.open("https://saveforme.devcollab.pro")}
 							>
 								<div className="flex justify-between">
-									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">SaveForMe</h5>
+									<h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Save For Me</h5>
 									<span className="text-[0.8em] text-gray-600">2024</span>
 								</div>
-								<span className="text-[0.8em] text-gray-600">Save For Me</span>
-								<img src="SaveForme.png" alt="" className="w-full rounded-md my-2" />
+								<span className="text-[0.8em] text-gray-600">Personal Saving Assistant</span>
+								<img src="saveforme.png" alt="" className="w-full rounded-md my-2" />
 								<p className="text-[0.9em] my-3">
-									Website built in React, TypeScript, JavaScript. Helping couples to save their money
-									instead of wasting them.
+									Website built with Node.js and NextJS. Helping couples to save money for their future.
 								</p>
 							</div>
 						</div>
