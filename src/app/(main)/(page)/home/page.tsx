@@ -12,6 +12,7 @@ import { Modal, ModalBody, ModalProvider, ModalTrigger, ModalContent } from "@/a
 import { useForm } from "react-hook-form";
 import { Toast } from "@/app/components/ui/toast";
 import axios from "axios";
+import Badge from "@/app/components/ui/badge";
 
 export default function Page() {
     const { register, handleSubmit } = useForm();
@@ -305,6 +306,19 @@ export default function Page() {
                                             <div className="text-[.8em]">2022 - Present</div>
                                         </div>
                                     </div>
+                                    <div
+                                        className="flex flex-wrap min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
+                                        style={{ transition: "0.5s ease all" }}
+                                    >
+                                        <img src="https://www.csb.gov.hk/images/logo_csb_en.svg" alt="" className="w-[3em] h-[3em] object-cover object-left" />
+                                        <div className="flex flex-col gap-1">
+                                            <div className="text-[1em] font-bold">Pass in CRE and BLNST</div>
+                                            <div className="text-[.9em]">Use of English level 2, Use of Chinese level 2, Aptitude Test Pass and BLNST Pass</div>
+                                        </div>
+                                        <div className="flex items-end h-100 ms-auto">
+                                            <div className="text-[.8em]">2024</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -323,7 +337,10 @@ export default function Page() {
                             >
                                 <div className="flex justify-between">
                                     <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Devcollab</h5>
-                                    <span className="text-[0.8em] text-gray-600">2024</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[0.8em] text-gray-600">2024</span>
+                                        <Badge variant="outline">Beginner</Badge>
+                                    </div>
                                 </div>
                                 <span className="text-[0.8em] text-gray-600">Game Assistance</span>
                                 <img src="devcollabpro.png" alt="" className="w-full rounded-md my-2" />
@@ -339,7 +356,10 @@ export default function Page() {
                             >
                                 <div className="flex justify-between">
                                     <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Pixel Nimbus</h5>
-                                    <span className="text-[0.8em] text-gray-600">2024</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[0.8em] text-gray-600">2024</span>
+                                        <Badge variant="outline">Beginner</Badge>
+                                    </div>
                                 </div>
                                 <span className="text-[0.8em] text-gray-600">Information</span>
                                 <img src="pixelnimbus.png" alt="" className="w-full rounded-md my-2" />
@@ -352,7 +372,10 @@ export default function Page() {
                             <div className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500" onClick={() => window.open("https://esgbot.net")}>
                                 <div className="flex justify-between">
                                     <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">ESGBOT</h5>
-                                    <span className="text-[0.8em] text-gray-600">2022</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[0.8em] text-gray-600">2022</span>
+                                        <Badge variant="default">Production</Badge>
+                                    </div>
                                 </div>
                                 <span className="text-[0.8em] text-gray-600">ESG Report Generation Services</span>
                                 <img src="esgbot.png" alt="" className="w-full rounded-md my-2" />
@@ -367,7 +390,10 @@ export default function Page() {
                             >
                                 <div className="flex justify-between">
                                     <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Save For Me</h5>
-                                    <span className="text-[0.8em] text-gray-600">2024</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[0.8em] text-gray-600">2024</span>
+                                        <Badge variant="outline">Beginner</Badge>
+                                    </div>
                                 </div>
                                 <span className="text-[0.8em] text-gray-600">Personal Saving Assistant</span>
                                 <img src="saveforme_bg.png" alt="" className="w-full rounded-md my-2" />
@@ -383,7 +409,10 @@ export default function Page() {
                             >
                                 <div className="flex justify-between">
                                     <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">PennyWise</h5>
-                                    <span className="text-[0.8em] text-gray-600">2024</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[0.8em] text-gray-600">2024</span>
+                                        <Badge variant="default">Production</Badge>
+                                    </div>
                                 </div>
                                 <span className="text-[0.8em] text-gray-600">Personal Subscription Management Platform</span>
                                 <img src="pennywisebg.png" alt="" className="w-full rounded-md my-2" />
