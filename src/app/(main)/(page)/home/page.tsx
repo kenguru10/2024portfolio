@@ -306,19 +306,6 @@ export default function Page() {
                                             <div className="text-[.8em]">2022 - Present</div>
                                         </div>
                                     </div>
-                                    <div
-                                        className="flex flex-wrap min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
-                                        style={{ transition: "0.5s ease all" }}
-                                    >
-                                        <img src="https://www.csb.gov.hk/images/logo_csb_en.svg" alt="" className="w-[3em] h-[3em] object-cover object-left" />
-                                        <div className="flex flex-col gap-1">
-                                            <div className="text-[1em] font-bold">Pass in CRE and BLNST</div>
-                                            <div className="text-[.9em]">Use of English level 2, Use of Chinese level 2, Aptitude Test Pass and BLNST Pass</div>
-                                        </div>
-                                        <div className="flex items-end h-100 ms-auto">
-                                            <div className="text-[.8em]">2024</div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -331,44 +318,6 @@ export default function Page() {
                         {/* <h5 className="text-xl font-[500]">Project</h5> */}
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4 gap-3 sm:gap-10">
-                            <div
-                                className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
-                                onClick={() => window.open("https://devcollab-psi.vercel.app/landingpage")}
-                            >
-                                <div className="flex justify-between">
-                                    <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Devcollab</h5>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-[0.8em] text-gray-600">2024</span>
-                                        <Badge variant="outline">Beginner</Badge>
-                                    </div>
-                                </div>
-                                <span className="text-[0.8em] text-gray-600">Game Assistance</span>
-                                <img src="devcollabpro.png" alt="" className="w-full rounded-md my-2" />
-                                <p className="text-[0.9em] my-3">
-                                    A web platform designed to assist gamers by providing features such as real-time game analytics, strategy guides, and community forums. Utilized technologies
-                                    including HTML, CSS, and JavaScript to create a responsive and user-friendly interface. The platform aims to enhance the gaming experience and facilitate community
-                                    engagement among users.
-                                </p>
-                            </div>
-                            <div
-                                className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500"
-                                onClick={() => window.open("https://blog.devcollab.pro")}
-                            >
-                                <div className="flex justify-between">
-                                    <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">Pixel Nimbus</h5>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-[0.8em] text-gray-600">2024</span>
-                                        <Badge variant="outline">Beginner</Badge>
-                                    </div>
-                                </div>
-                                <span className="text-[0.8em] text-gray-600">Information</span>
-                                <img src="pixelnimbus.png" alt="" className="w-full rounded-md my-2" />
-                                <p className="text-[0.9em] my-3">
-                                    A blog web platform using Next.js to deliver a fast, responsive, and SEO-friendly user experience. The platform features a clean design, easy navigation, and
-                                    dynamic content rendering, allowing users to access articles seamlessly. Implemented server-side rendering and static site generation to optimize performance and
-                                    improve loading times. The project showcases my skills in modern web development and my ability to build scalable applications.
-                                </p>
-                            </div>
                             <div className="border p-4 rounded-lg border-[#DFD3C3] cursor-pointer shadow-md hover:shadow-lg transition duration-500" onClick={() => window.open("https://esgbot.net")}>
                                 <div className="flex justify-between">
                                     <h5 className="text-[0.9em] m-0 p-0 font-bold montserrat">ESGBOT</h5>
