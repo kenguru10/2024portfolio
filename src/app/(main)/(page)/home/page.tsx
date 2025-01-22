@@ -312,24 +312,11 @@ export default function Page() {
                                     >
                                         <img src="https://www.carbonexchange.net/img/footer_logo.png" alt="" className="w-[3em] h-[3em] object-cover" />
                                         <div className="flex flex-col gap-1">
-                                            <div className="text-[1em] font-bold">Software Engineer</div>
+                                            <div className="text-[1em] font-bold">Software Engineer & Coop Engineer</div>
                                             <div className="text-[.9em]">Carbon Exchange (Hong Kong) Ltd</div>
                                         </div>
                                         <div className="flex items-end h-100 ms-auto">
-                                            <div className="text-[.8em]">2022 - 2023</div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="flex flex-wrap min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
-                                        style={{ transition: "0.5s ease all" }}
-                                    >
-                                        <img src="https://www.carbonexchange.net/img/footer_logo.png" alt="" className="w-[3em] h-[3em] object-cover" />
-                                        <div className="flex flex-col gap-1">
-                                            <div className="text-[1em] font-bold">Coop Engineer</div>
-                                            <div className="text-[.9em]">Carbon Exchange (Hong Kong) Ltd</div>
-                                        </div>
-                                        <div className="flex items-end h-100 ms-auto">
-                                            <div className="text-[.8em]">2023 - Present</div>
+                                            <div className="text-[.8em]">2022 - Present</div>
                                         </div>
                                     </div>
                                 </div>
