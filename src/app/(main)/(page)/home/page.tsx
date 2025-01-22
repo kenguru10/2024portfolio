@@ -297,13 +297,39 @@ export default function Page() {
                                         className="flex flex-wrap min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
                                         style={{ transition: "0.5s ease all" }}
                                     >
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEUKCiMAABgAAA0JCSMAAA9XV2Obm6IAAB0AABRGRlP///+wsLcXFyo7O00AAAAnJzempqwEBCHr6+5zc3wAABHCwsfa2t47O0f09PZRUV5cXGgAABeBgYrT09cAABO2trwAABqXl58AAAUAACAVFSphYWlbW2E1NUKPj5cfHzLMzNBoaHQsLD//65ZnAAABT0lEQVR4AcRQBYKDQAwMTtM2FN/i7v9/32XZcvKCGyQycfgvaLrx12Ho2qWalq0pn3NF25apNPeGd/3kHk9SLv2ON1cqjocvOsv6jyCMVAl6oeew1OJE8+EMSwW+VQNfS2LNAC1DK/8UKxDLSs2WW5hpQHVCoGo1CaKwGmVRUhNUov2QXYGMQv+QrXDBE6ELEv0gEAMsSNV1Q+FBKsZGDXhHjAucCjjZZhQpzGLUzsiMG3qhuOOiS1sbxQyrKmvkG+JCC3dNwFdlVzBF28mOc8BespkM0l6O1woTKC5JkmmAe+SGkpwlSWVMEIU4y0MNiYDe0N57WfJpwJmRT+mvSd2xFS2Ja/AhqN5zju3iZPXZu+NO8pr1w2Dh2RELYmcEDJ5id9ntHD7/n5Lj3ra6mx/VZSW3UZYUVVmbPii78Xr4g95r/Es3Lu2Cyv8arQAAQJwXtvIxXO8AAAAASUVORK5CYII=" alt="" className="w-[3em] h-[3em] object-cover" />
+                                        <div className="flex flex-col gap-1">
+                                            <div className="text-[1em] font-bold">Responsive Web Design Certification</div>
+                                            <div className="text-[.9em]">FreeCodeCamp</div>
+                                        </div>
+                                        <div className="flex items-end h-100 ms-auto">
+                                            <div className="text-[.8em]">2024</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="flex flex-wrap min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
+                                        style={{ transition: "0.5s ease all" }}
+                                    >
                                         <img src="https://www.carbonexchange.net/img/footer_logo.png" alt="" className="w-[3em] h-[3em] object-cover" />
                                         <div className="flex flex-col gap-1">
                                             <div className="text-[1em] font-bold">Software Engineer</div>
                                             <div className="text-[.9em]">Carbon Exchange (Hong Kong) Ltd</div>
                                         </div>
                                         <div className="flex items-end h-100 ms-auto">
-                                            <div className="text-[.8em]">2022 - Present</div>
+                                            <div className="text-[.8em]">2022 - 2023</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="flex flex-wrap min-h-[2em] w-fit py-5 px-8 bg-[#DFD3C3] gap-4 items-center rounded-[10px] cursor-pointer shadow-sm hover:shadow-lg"
+                                        style={{ transition: "0.5s ease all" }}
+                                    >
+                                        <img src="https://www.carbonexchange.net/img/footer_logo.png" alt="" className="w-[3em] h-[3em] object-cover" />
+                                        <div className="flex flex-col gap-1">
+                                            <div className="text-[1em] font-bold">Coop Engineer</div>
+                                            <div className="text-[.9em]">Carbon Exchange (Hong Kong) Ltd</div>
+                                        </div>
+                                        <div className="flex items-end h-100 ms-auto">
+                                            <div className="text-[.8em]">2023 - Present</div>
                                         </div>
                                     </div>
                                 </div>
