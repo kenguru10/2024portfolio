@@ -29,9 +29,6 @@ export default function Layout({ children }: Props) {
 							</a>
 						</div>
 					</div>
-					<button className="flex px-7 py-1 border rounded-full border-[#DACDBC]">
-						<div className="montserrat font-[500]">Projects</div>
-					</button>
 				</div>
 			</motion.div>
 			<div className="px-10">{children}</div>
