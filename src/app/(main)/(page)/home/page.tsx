@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 // update the above line to remove the eslint warning
 "use client";
-import React, { FormEvent, useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaPhp, FaPython, FaSass, FaWhatsapp } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
@@ -22,12 +22,39 @@ export default function Page() {
         type: "",
     });
     const [isSendingEmail, setIsSendingEmail] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     // set the navbar link active
     useEffect(() => {
         const items = document.querySelectorAll("#nav-bar-items a");
         items[0].classList.add("underline");
     }, []);
+
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+        if (!scrollContainer) return;
+
+        let scrollInterval: NodeJS.Timeout;
+
+        const startScroll = () => {
+            scrollInterval = setInterval(() => {
+                if (!isHovered && scrollContainer) {
+                    if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
+                        scrollContainer.scrollLeft = 0;
+                    } else {
+                        scrollContainer.scrollLeft += 1;
+                    }
+                }
+            }, 30);
+        };
+
+        startScroll();
+
+        return () => {
+            if (scrollInterval) clearInterval(scrollInterval);
+        };
+    }, [isHovered]);
 
     const onSubmitMessage = async (data: any) => {
         setIsSendingEmail(true);
@@ -74,46 +101,60 @@ export default function Page() {
                         </p>
                         <div className="relative mt-8 sm:mt-10">
                             <h5 className="text-lg sm:text-xl font-[500] mb-5">Skills</h5>
-                            <div className="items-center inline-flex flex-nowrap gap-2 sm:gap-3 w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaHtml5 className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">HTML</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaCss3 className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">CSS</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaJs className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">Javascript</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaReact className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">React</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <RiNextjsFill className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">NextJS</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaPhp className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">PHP</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <DiMysql className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">MySQL</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaPython className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">Python</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <SiFlask className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">Flask</div>
-                                </div>
-                                <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center">
-                                    <FaSass className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
-                                    <div className="text-sm sm:text-base font-bold">Sass</div>
+                            <div className="relative w-full">
+                                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-transparent via-white/5 to-transparent z-10"></div>
+                                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-transparent via-white/5 to-transparent z-10"></div>
+                                
+                                <div 
+                                    ref={scrollContainerRef}
+                                    onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
+                                    className="flex overflow-x-auto scrollbar-hide gap-2 sm:gap-3 pb-2"
+                                >
+                                    {[...Array(2)].map((_, index) => (
+                                        <div key={index} className="flex gap-2 sm:gap-3">
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaHtml5 className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">HTML</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaCss3 className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">CSS</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaJs className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">Javascript</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaReact className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">React</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <RiNextjsFill className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">NextJS</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaPhp className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">PHP</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <DiMysql className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">MySQL</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaPython className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">Python</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <SiFlask className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">Flask</div>
+                                            </div>
+                                            <div className="flex p-3 sm:p-5 border-2 border-[#DFD3C3] gap-2 sm:gap-3 rounded-[.5em] items-center shrink-0">
+                                                <FaSass className="w-[1.2em] sm:w-[1.5em] h-[1.2em] sm:h-[1.5em]" />
+                                                <div className="text-sm sm:text-base font-bold">Sass</div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
